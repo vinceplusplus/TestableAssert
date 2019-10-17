@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "TestableAssertSupport",
+        "repositoryURL": "https://github.com/vinceplusplus/TestableAssertSupport",
+        "state": {
+          "branch": null,
+          "revision": "2a384f6ece70911f739c0ac54c1d47b0b5c66b80",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
