@@ -13,8 +13,8 @@ func getFunctionName(_ declaration: String) -> String {
 func expectFailure(assertFuncs: [AssertFunc],
                    functionName: String,
                    passingMessage: String,
-                   expressionClosure: @escaping @autoclosure () -> Void,
-                   expectedMessage: @autoclosure () -> String?,
+                   expressionClosure: @escaping () -> Void,
+                   expectedMessage: String?,
                    file: StaticString,
                    line: UInt) {
   var didFail = false
@@ -86,7 +86,7 @@ func expectFailure(assertFuncs: [AssertFunc],
   }
 
   if didFail {
-    if let message = expectedMessage(), message != messageOnFail {
+    if let message = expectedMessage, message != messageOnFail {
       XCTFail("\(functionName): expected \"\(message)\" but got \"\(messageOnFail)\"", file: file, line: line)
     }
   } else if !didFail {
