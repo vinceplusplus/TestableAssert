@@ -31,10 +31,10 @@ func testWithRandomFailure() {
 
 // Tests.swift
 
-expectFailedAssertion(testWithAssert())
-expectFailedPrecondition(testWithPreconditionFailure(), "preconditionFailure() message")
-expectFatalError(testWithFatalError())
-expectAnyFailure(testWithRandomFailure())
+expectFailedAssertion({ testWithAssert() })
+expectFailedPrecondition({ testWithPreconditionFailure() }, "preconditionFailure() message")
+expectFatalError({ testWithFatalError() })
+expectAnyFailure({ testWithRandomFailure() })
 ```
 
 # Installation
