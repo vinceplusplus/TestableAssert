@@ -8,9 +8,7 @@ jobs:
     runs-on: macOS-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Xcode Selection
-      run: sudo xcode-select -s /Applications/Xcode_11.1.app
+    - uses: actions/checkout@v2
     - name: Build
       run: swift build -v
     - name: Run tests
